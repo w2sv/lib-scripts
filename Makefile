@@ -6,6 +6,9 @@ update-dependencies:
 update-gradle:
 	@./gradlew wrapper --gradle-version latest
 
+update-scripts-module:
+	@git submodule update --remote --checkout;git add scripts;git commit -m "Update scripts submodule"
+
 format:
 	@./gradlew ktlintFormat
 
@@ -21,6 +24,9 @@ publish:
 
 	@echo "###### Build & test ######"
 	@./gradlew build
+
+	@echo "###### Push latest changes ######"
+	@git push
 
 	@VERSION=$$(cat version.txt); \
 	echo "###### Create git tag $$VERSION ######"; \
