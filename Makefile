@@ -27,7 +27,7 @@ publish:
 	git tag "$$VERSION"; \
 	git push origin "$$VERSION"
 
-	@echo "###### Generate release notes ######"; \
+	@echo "###### Generate release notes ######"
 	@./scripts/generate-release-notes.sh
 
 	@VERSION=$$(cat version.txt); \
