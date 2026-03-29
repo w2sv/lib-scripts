@@ -1,7 +1,11 @@
-Initialize as submodule via 
+Add as submodule:
 
 `git submodule add https://github.com/w2sv/lib-scripts scripts`
 
-Update via
+Initialize after cloning a repo:
 
 `git submodule update --init --recursive`
+
+Update to latest commit:
+
+`git submodule update --remote scripts`
