@@ -22,8 +22,8 @@ publish:
 	@echo "###### Bump version ######"
 	@./scripts/bump-version.sh $(type)
 
-	@echo "###### Build & test ######"
-	@./gradlew build
+	@echo "###### Publish to Maven Central ######"
+	@./gradlew publishToMavenCentral
 
 	@echo "###### Push latest changes ######"
 	@git push
