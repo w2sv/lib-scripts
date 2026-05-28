@@ -7,7 +7,7 @@ update-gradle:
 	@./gradlew wrapper --gradle-version latest
 
 update-scripts-module:
-	@git submodule update --remote --checkout;git add scripts;git commit -m "Update scripts submodule"
+	@git submodule update --remote --checkout;git add scripts;git commit -m "chore: update scripts submodule"
 
 format:
 	@./gradlew ktlintFormat
